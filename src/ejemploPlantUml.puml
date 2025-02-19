@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/class-diagram
+class person{
+    #nationality
+    +sex
+    +age
+    -id
+}
+class estudent{
+    +clasHours
+    +write() : String
+}
+person <|-- estudent
+class worker{
+    +tipoOfWork
+    +work()
+}
+interface universitary{
+    +nameOfUniversity
+    -idEstudent
+}
+class smallWorker{
+    +midTimeWork()
+
+}
+person <|-- worker
+worker <|-- smallWorker
+universitary <|-- estudent
+@enduml
